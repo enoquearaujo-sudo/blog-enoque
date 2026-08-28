@@ -1,0 +1,124 @@
+/* Variáveis para Tema Claro (Padrão) */
+:root {
+    --bg-color: #f4f4f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --accent-color: #e63946;
+    --button-bg: #1d3557;
+    --button-text: #ffffff;
+    --transition-speed: 0.4s;
+}
+
+/* Variáveis para Tema Escuro */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #ff6b6b;
+    --button-bg: #457b9d;
+    --button-text: #ffffff;
+}
+
+/* Estilos Gerais da Página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    display: flex;
+    justify-content: center;
+}
+
+/* Container Principal do Blog */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color var(--transition-speed);
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Imagem do Post */
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+ul {
+    line-height: 1.6;
+}
+
+/* Botões */
+.actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-theme {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+
+.btn-like {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Estilo do Botão quando Curtido */
+.btn-like.liked {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
+/* Rodapé e Links */
+footer {
+    margin-top: 25px;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
